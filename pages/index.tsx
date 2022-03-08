@@ -4,14 +4,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Loader from '../components/Loader';
 import styles from '../styles/Home.module.css';
+import toast from 'react-hot-toast';
 
 const Home: NextPage = () => {
   return (
     <div>
-      <Link href={'todo'}>
+      <Link href={'/admin'}>
         <a>merp</a>
       </Link>
       <Loader show></Loader>
+      <button onClick={() => toast.success('hello toast!')}>Toast Me</button>
     </div>
   );
 };
